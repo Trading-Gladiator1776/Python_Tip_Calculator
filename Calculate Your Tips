@@ -8,7 +8,6 @@ round(tip_percentage, 2)
 
 number_people = input("How many people are splitting the bill? ")
 bill_split = int(number_people)
-
 #The text below confirms that the inputs so far have been confirmed and that they are formatted correctly
 # print(total_bill)
 # print(type(total_bill))
@@ -18,6 +17,9 @@ bill_split = int(number_people)
 # print(type(bill_split))
 
 split_total = ((total_bill*(tip_percentage/100)) + total_bill) / bill_split
-round(split_total, 2)
 #the above text is each integer or float put into the formula to calculate the tip, bill, and split
-print(f"Each person in your party should pay: ${round(split_total, 2)}")
+
+total_amount = round(split_total, 2)
+total_amount = "{:.2f}".format(split_total)
+print(f"Each person in your party should pay: ${total_amount}")
+
