@@ -1,0 +1,23 @@
+print("Welcome to the tip calculator!")
+bill_total = input("What is the total of your bill? $")
+total_bill = float(bill_total)
+
+tip = input(f"What percentage tip would you like to give? {18}, {20}, or {25}%? %")
+tip_percentage = int(tip)
+round(tip_percentage, 2)
+
+number_people = input("How many people are splitting the bill? ")
+bill_split = int(number_people)
+
+#The text below confirms that the inputs so far have been confirmed and that they are formatted correctly
+# print(total_bill)
+# print(type(total_bill))
+# print(tip_percentage)
+# print(type(tip_percentage))
+# print(bill_split)
+# print(type(bill_split))
+
+split_total = ((total_bill*(tip_percentage/100)) + total_bill) / bill_split
+round(split_total, 2)
+#the above text is each integer or float put into the formula to calculate the tip, bill, and split
+print(f"Each person in your party should pay: ${round(split_total, 2)}")
